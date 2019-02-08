@@ -1,0 +1,7 @@
+#### Time Course Data
+
+* Chapter overview
+* What are "time course data"?
+* Key challenges in analyzing time course data
+* Visualizing time course data
+* Formatting data for analysis and plotting
