@@ -1,0 +1,8 @@
+## When Change over Time Is Not Linear
+
+* Chapter overview
+* Choosing a functional form
+* Using higher-order polynomials
+* Example: Word learning
+* Parameter-specific p-values
+* Reporting growth curve analysis results
