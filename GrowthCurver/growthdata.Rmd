@@ -1,0 +1,107 @@
+growthdata
+growthdata
+Simulated growth curve data
+Description
+A dataset containing absorbance measurements over time of microbes growing in a plate reader for
+1 day. The growth curves for a whole plate are included.
+Usage
+growthdata
+Format
+A data frame with 145 observations and 97 variables:
+time time, in hours
+A1 absorbance readings of well A1
+A2 absorbance readings of well A2
+A3 absorbance readings of well A3
+A4 absorbance readings of well A4
+A5 absorbance readings of well A5
+A6 absorbance readings of well A6
+A7 absorbance readings of well A7
+A8 absorbance readings of well A8
+A9 absorbance readings of well A9
+A10 absorbance readings of well A10
+A11 absorbance readings of well A11
+A12 absorbance readings of well A12
+B1 absorbance readings of well B1
+B2 absorbance readings of well B2
+B3 absorbance readings of well B3
+B4 absorbance readings of well B4
+B5 absorbance readings of well B5
+B6 absorbance readings of well B6
+B7 absorbance readings of well B7
+B8 absorbance readings of well B8
+B9 absorbance readings of well B9
+B10 absorbance readings of well B10
+B11 absorbance readings of well B11growthdata
+B12 absorbance readings of well B12
+C1 absorbance readings of well C1
+C2 absorbance readings of well C2
+C3 absorbance readings of well C3
+C4 absorbance readings of well C4
+C5 absorbance readings of well C5
+C6 absorbance readings of well C6
+C7 absorbance readings of well C7
+C8 absorbance readings of well C8
+C9 absorbance readings of well C9
+C10 absorbance readings of well C10
+C11 absorbance readings of well C11
+C12 absorbance readings of well C12
+D1 absorbance readings of well D1
+D2 absorbance readings of well D2
+D3 absorbance readings of well D3
+D4 absorbance readings of well D4
+D5 absorbance readings of well D5
+D6 absorbance readings of well D6
+D7 absorbance readings of well D7
+D8 absorbance readings of well D8
+D9 absorbance readings of well D9
+D10 absorbance readings of well D10
+D11 absorbance readings of well D11
+D12 absorbance readings of well D12
+E1 absorbance readings of well E1
+E2 absorbance readings of well E2
+E3 absorbance readings of well E3
+E4 absorbance readings of well E4
+E5 absorbance readings of well E5
+E6 absorbance readings of well E6
+E7 absorbance readings of well E7
+E8 absorbance readings of well E8
+E9 absorbance readings of well E9
+E10 absorbance readings of well E10
+E11 absorbance readings of well E11
+E12 absorbance readings of well E12
+F1 absorbance readings of well F1
+F2 absorbance readings of well F2
+F3 absorbance readings of well F3
+F4 absorbance readings of well F4
+F5 absorbance readings of well F5
+F6 absorbance readings of well F6
+F7 absorbance readings of well F7
+F8 absorbance readings of well F8
+F9 absorbance readings of well F9
+F10 absorbance readings of well F10
+F11 absorbance readings of well F11
+F12 absorbance readings of well F12
+G1 absorbance readings of well G1
+G2 absorbance readings of well G2
+G3 absorbance readings of well G3
+G4 absorbance readings of well G4
+G5 absorbance readings of well G5
+G6 absorbance readings of well G6
+G7 absorbance readings of well G7
+G8 absorbance readings of well G8
+G9 absorbance readings of well G9
+G10 absorbance readings of well G10
+G11 absorbance readings of well G11
+G12 absorbance readings of well G12
+H1 absorbance readings of well H1
+H2 absorbance readings of well H2
+H3 absorbance readings of well H3
+H4 absorbance readings of well H4
+H5 absorbance readings of well H5
+H6 absorbance readings of well H6
+H7 absorbance readings of well H7
+H8 absorbance readings of well H8
+H9 absorbance readings of well H9
+H10 absorbance readings of well H10
+H11 absorbance readings of well H11
+H12 absorbance readings of well H12
