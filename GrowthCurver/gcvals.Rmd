@@ -1,0 +1,29 @@
+gcvals
+Creates an object of type gcvals.
+Description
+Constructor function for the "gcvals" class. This object is most often obtained when calling SummarizeGrowth
+(it is the first parameter in the gcvals object).
+Usage
+gcvals(k, k_se, k_p, n0, n0_se, n0_p, r, r_se, r_p, sigma, df, t_mid, dt, auc_l,
+auc_e, note)
+Arguments
+k The carrying capacity parameter
+k_se The standard error of the carrying capacity parameter
+k_p The p value of the carrying capacity parameter
+n0 The initial population size
+n0_se The standard error of the initial population size
+n0_p The p value of the initial population size
+r The growth rate
+r_se The standard error of the growth rate
+r_p The p value of the growthrate
+sigma Residual standard error from non-linear least squares fit of the model to the data
+df Degrees of freedom
+t_mid The time at the inflection point of the logistic curve (occurs at half of the carrying
+capacity)
+dt The maximum doubling time, obtained by evaluating the the unrestrained growth
+of the population with growth rate r
+auc_l The area under the curve of the fitted logistic equation from time 0 to time t
+auc_e The area under the curve of the measurements.
+note Feedback on common problems with fitting the logistic curve to the data
+Value
+An object of class gcvals.4
