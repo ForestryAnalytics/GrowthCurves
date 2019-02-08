@@ -1,0 +1,6 @@
+## Binary Outcomes: Logistic GCA
+* Chapter overview
+* Why binary outcomes need logistic analyses
+* Logistic GCA
+* Quasi-logistic GCA: Empirical logit
+* Plotting model fits
