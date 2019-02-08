@@ -1,0 +1,4 @@
+## Individual Differences
+* Chapter overview
+* Individual differences as fixed effects
+* Individual differences as random effects
