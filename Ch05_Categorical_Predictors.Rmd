@@ -1,0 +1,4 @@
+## Categorical Predictors
+* Chapter overview
+* Coding categorical predictors
+* Multiple comparisons
