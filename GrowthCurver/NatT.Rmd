@@ -1,0 +1,14 @@
+NAtT
+Number of Cells at Time t
+Description
+This function gives the number of cells or absorbance (N) at time t when the parameters to the
+logistic equation are K, N0, and r.
+Usage
+NAtT(k, n0, r, t)
+Arguments
+k The carrying capacity
+n0 The initial population size (absorbance or individuals)
+r The exponential "growth rate"
+t The time at which you want to know N
+Value
+The number of cells, or N, at time t
