@@ -1,0 +1,7 @@
+#### Structuring Random Effects
+
+* Chapter overview
+* "Keep it maximal"
+* Within-participant effects
+* Participants as random vs. fixed effects
+* Visualizing effects of polynomial time terms
