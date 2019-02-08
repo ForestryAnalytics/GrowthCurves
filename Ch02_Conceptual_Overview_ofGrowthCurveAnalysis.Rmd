@@ -1,0 +1,6 @@
+## Conceptual Overview of Growth Curve Analysis
+
+* Chapter overview
+* Structure of a growth curve model
+* A simple growth curve analysis
+* Another example: Visual search response times
