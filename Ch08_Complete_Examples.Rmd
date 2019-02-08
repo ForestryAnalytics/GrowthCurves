@@ -1,0 +1,8 @@
+## Complete Examples
+* Linear change
+* Orthogonal polynomials
+* Within-subject manipulation
+* Logistic GCA
+* Quasi-logistic GCA
+* Individual differences as fixed effects
+* Individual differences as random effects
