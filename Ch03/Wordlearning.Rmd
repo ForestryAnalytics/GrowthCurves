@@ -1,0 +1,13 @@
+
+
+```{r}
+## 3.4 Word Learning
+ggplot(WorkLearnEx,aes(Block,Accuracy,shape=TP))+ stat_summary(fun.y=mean_se,geom="line",size=1) +
+stat_summary(fun.data=mean_se,geom="pointrange",size=1)+ 
+theme_bw(base_size=10)+
+coord_cartesian(ylim=c(0.5,1.0))+
+scale_x_continuous(breaks=1:10)
+
+
+
+```
