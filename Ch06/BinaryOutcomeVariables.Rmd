@@ -1,0 +1,28 @@
+
+* Dealing with Binary Outcome Variables
+
+
+Multilevel logistic regression applied directly to the binary outcome variable
+
+Empirical logit transformation to rescale the binary outcome data
+
+6.3
+
+m.log <- glmer( cbind(sumFix,N-sumFix) }
+   (ot1+ot2+ot3)*Condition + 
+   (ot1+ot2+ot3|Subject) +
+   (ot1+ot2 | Subject:Condition),
+   data=TargetFix,family=binomial)
+
+
+6.5
+
+ggplot(TargetFix, aes(Time, Observed,shape=Condition) + stat_summary(fun.data=mean_se,geom="pointrange") +
+stat_summary(aes(y=Fit,linetype=Condition),
+       fun.y=mean,geom="line") +
+ylab("Outcome") + 
+theme_bw(base_size=10)
+
+
+* Logistic GCA
+* Quasi-Logistic GCA with empirical logits
