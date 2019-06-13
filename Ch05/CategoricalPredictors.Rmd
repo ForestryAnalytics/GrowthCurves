@@ -1,0 +1,20 @@
+Categorical Predictors
+
+
+summary(amant.ex)
+
+m.amant <- lmer(DRS ~ Week*Group + (Week|Patient),
+  data.amant.ex , REML =F)
+  
+coef(summary(m.amant))
+
+summary(MotorLearning)
+
+
+
+m.NLsum <- lmer(Accuracy ~
+   (ot1+ot2+ot3)*DifficultySum*ConditionSum + 
+   (ot1+ot2+ot3|SubjID) +
+   (ot1+ot2 | SubjID:DifficultySum:ConditionSum),
+   data=MotorLearning,
+   REML=FALSE)
