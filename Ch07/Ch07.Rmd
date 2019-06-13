@@ -1,0 +1,25 @@
+
+ggplot(subset(ELDEL,!is.na(pwmcor)),aes(Month,pwmcor,
+shape=LK3))+
+stat_summary(fun.y=mean_se,geom="point") +
+stat_summary(fun.data=mean_se,geom="errorbar",width=1)+
+stat_summary(aes(y=fitted(eldel.full), linetype=LK3,
+       fun.y=mean,geom="line") +
+theme_bw(base_size=10) + 
+labs() +
+theme(legend.position=c(0,1),
+      legend.justification =c(0,1),
+      legend.background = element_rect(color="black",fill="white"))
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page 132
+m.theme <- lmer(meanFix ~
+   (ot1+ot2+ot3+ot4)*Object + 
+   (ot1+ot2+ot3+ot4|subj) + 
+   (ot1+ot2|subj:Object),
+      data=FunctThemePts,
+   control =lmerControl(optimizer="bobyqa")
+
+   REML=FALSE)
+   
