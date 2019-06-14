@@ -1,0 +1,22 @@
+
+%%%%%%%%
+% Page 142
+Linear Change
+
+#Fit Base model
+
+amant.base <- lmer(DRS ~ 1 + Week + (1 + Week|Patient),data=amant.ex,REML=F)
+
+amant.0 <- lmer(DRS ~ 1 + Week + Group + (1 + Week|Patient),data=amant.ex,REML=F)
+
+amant.0 <- lmer(DRS ~ 1 + Week*Group + (1 + Week|Patient),data=amant.ex,REML=F)
+
+anova(amant.base,amant.0,amant.1)
+
+%% - Page 143
+
+p1 <- ggplot(amant.ex,aes(Week,DRS,shape=Group)) + stat_summary(fun.data= mean_se, geom="pointrange") +
+stat_summary(aes(y=fitted(amant.1),linetype=Group) fun.y=mean, geom="line") + 
+theme_bw(base_size=10)
+
+ggsave("amantFit.pdf",p1,width=4.5,height=3.5, dp1=300)
