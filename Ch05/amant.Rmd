@@ -1,0 +1,28 @@
+
+
+
+
+```{r}
+
+m.amant <- lmer (DRS ~ Week*Group + (Week|Patients), data = amant.ex,REML=F)
+
+coef(summary(m.amant))
+
+```
+
+
+```{r}
+
+summary(MotorLearning)
+
+
+comps <- glht(m.sem,contrast.matrix)
+
+```
+
+
+```{r}
+
+summary(comps)
+
+```
