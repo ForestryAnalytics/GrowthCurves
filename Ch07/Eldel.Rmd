@@ -1,0 +1,40 @@
+% Page 120
+cor(subset(ELDEL, Month==0, 
+select=c("wdspan1","lk1","ran1","pa1"))
+
+% Page 121
+```{r}
+eldel.base <- lmer(pwmcor ~Month   + (Month|id), data = ELDEL, REML=FALSE)
+```
+
+```{r}
+eldel.lk.pa <- lmer(pwmcor ~Month + lk1  + (Month|id), data = ELDEL, REML=FALSE)
+anova(eldel.base,eldel.lk.pa)
+```
+
+
+```{r}
+
+coef(summary(eldel.lk))
+```
+
+% Page 122
+```{r}
+eldel.pa <- lmer(pwmcor ~Month  + pa1 + (Month|id), data = ELDEL, REML=FALSE)
+```
+
+
+```{r}
+eldel.lk.pa <- lmer(pwmcor ~Month + lk1 + pa1 + (Month|id), data = ELDEL, REML=FALSE)
+
+anova(eldel.pa,eldel.lk.pa)
+```
+
+```{r}
+anova(eldel.lk,eldel.lk.pa)
+```
+
+%%% Page 124
+```{r}
+eldel.full <- lmer(pwmcor ~ wdspan1 + lk1 + ran1 pa1 + (Month|id), data = ELDEL, REML=FALSE)
+```
