@@ -1,0 +1,12 @@
+
+%page 62
+
+m2 <- lmer(Accuracy ~ (ot1 +ot2)*TP + (ot1+ot2|subject), data = WordLearnEx, REML=FALSE)
+
+m.1r <- lmer(Accuracy ~ (ot1 +ot2)*TP + (ot1|subject), data = WordLearnEx, REML=FALSE)
+
+m.nocorr <- lmer(Accuracy ~ (ot1 +ot2)*TP + (1|Subject)+ (0 + ot1|subject) + + (0 + ot2|subject), data = WordLearnEx, REML=FALSE)
+
+
+
+m.nocorr <- lmer(Accuracy ~ (ot1 +ot2)*TP + (1|Subject)+ (0 + ot1|subject) + + (0 + ot2|subject), data = WordLearnEx, REML=FALSE)
