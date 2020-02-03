@@ -1,22 +1,23 @@
 
-gcfit
+### gcfit
 
 Creates an object of class gcfit.
-Description
-This is a constructor function for the "gcfit" class. This class is most often obtained as the return
-value when calling SummarizeGrowth.
-Usage
+
+#### Description
+This is a constructor function for the "gcfit" class. 
+This class is most often obtained as the return value when calling ``SummarizeGrowth``.
+
+#### Usage
 gcfit(gc_vals, log_mod, data_t, data_n)
-Arguments
-gc_vals An object of class gcvals that contains the summarized metrics from fitting the
-growth model to a set of experimental observations. This is where the fitness
-proxy parameters can be found. See gcvals for more information the informa-
-tion found in this object.
-log_mod An object of class nlsModel that contains the results of fitting the logistic growth
-model to the data
-data_t A numeric vector of times
-data_n A numeric vector of cell count or absorbance readings
-Value
-An object of class gcfit, which is a list of three objects, that combines the parameters (vals = gc_vals,
-model = log_mod, data = list(data_t, data_n))gcvals
-3
+
+#### Arguments
+
+* gc_vals An object of class gcvals that contains the summarized metrics from fitting the growth model to a set of experimental observations. This is where the fitness proxy parameters can be found. See gcvals for more information the information found in this object.
+
+* log_mod An object of class ``nlsModel`` that contains the results of fitting the logistic growth model to the data
+* data_t A numeric vector of times
+* data_n A numeric vector of cell count or absorbance readings
+
+#### Value
+An object of class gcfit, which is a list of three objects, that combines the parameters ``(vals = gc_vals,
+model = log_mod, data = list(data_t, data_n))``
