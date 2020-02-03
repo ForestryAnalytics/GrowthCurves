@@ -1,0 +1,21 @@
+
+Parameter Specific p-values
+
+```{r}
+coefs <- data.frame(coef(summary(m.2))
+
+coefs$p <- 2 * (1 - pnorm(abs(coef$t.value)))
+
+coefs
+
+```
+
+#### LMERTEST
+
+```{r}
+library(lmerTest
+
+
+m.2t <- lmer(Accuracy ~ (ot1 + ot2) *TP + (ot1 +ot2|Subject), data=WordLearnEx,reml=F)
+
+```
