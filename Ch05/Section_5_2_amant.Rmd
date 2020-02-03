@@ -1,4 +1,12 @@
 
+```{r}
+m <- lm(Income ~ Education*Gender, data=dat)
+summary(m)$coefficients
+```
+
+```{r}
+contrasts(dat$Gender
+```
 
 
 
