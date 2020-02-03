@@ -1,0 +1,21 @@
+Description
+Time course of target object fixation during a spoken word-to-picture matching (i.e., "visual world paradigm").
+
+
+
+#### Format
+A data frame with 300 rows and 7 variables
+
+* Subject : subject ID, factor
+
+* Time : time (in ms) relative to word onset in 50ms bins, 300-1000
+
+* timeBin : rescaling of Time variable for easier model-fitting, 1-15
+
+* Condition : word frequency condition: High (e.g., torch, frog) or Low (e.g., class, horse)
+
+* meanFix : fixation proportion (subject mean): proportion of correct-response trials on which the object was fixated
+
+* sumFix : fixation sum: number of correct-response trials on which the object was fixated (i.e., numerator for meanFix)
+
+* N : number of correct-response trials (i.e., denominator for meanFix)
