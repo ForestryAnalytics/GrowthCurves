@@ -1,27 +1,30 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```{r}
+
 m.Left <- lmer(meanFix ~
    (ot1+ot2+ot3)*Condition + 
    ((ot1+ot2+ot3)*Condition|Subject),
    control =lmerControl(optimizer="bobyqa")
    data=TargetFix,
    REML=FALSE)
-   
-   
-   %%%%%%%%%%%%%%%%
+```
+
+
+```{r}
 
 ggplot(FunctTheme,aes(Time,meanFix,linetype=Condition))+facet_wrap(~Condition)+
 stat_summary(fun.y=mean_se,geom="line") +
 stat_summary(fun.data=mean_se,geom="ribbon",colour=NA,alpha=0.03)+ 
-
 theme_bw(base_size=10) + 
 labs() +
 theme(legend.position=c(1,1),
       legend.justification =c(1,1),
       legend.background = element_rect(color="black",fill="white")) +
 scale_shape_manual(values=c(1,16))
+```
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```{r}
+
 m.NLsum <- lmer(meanFix ~
    (ot1+ot2+ot3+ot4)*Object + 
    (ot1+ot2+ot3+ot4)*Condition + 
@@ -32,6 +35,10 @@ m.NLsum <- lmer(meanFix ~
    data=subset(FunctTheme,Object != "Target"),
    REML=FALSE)
    
+```
+
+
+```{r}
    
    
    
@@ -47,3 +54,6 @@ theme(legend.position=c(1,1),
       legend.justification =c(1,1),
       legend.background = element_rect(color="black",fill="white")) +
 scale_shape_manual(values=c(1,16))
+```
+
+
