@@ -1,0 +1,47 @@
+## Within-participant Effects
+
+#### TargetFix
+
+Within-subject effects
+Example: Target fixation in spoken word-to-picure matching (VWP)
+
+
+Example: Plot the model fit
+```{r}
+ggplot(WordLearn.gca, aes(Block, Accuracy, color=TP)) + 
+  stat_summary(fun.data=mean_se, geom="pointrange") + 
+  stat_summary(aes(y=fitted(m.2)), fun.y=mean, geom="line") +
+  theme_bw() + expand_limits(y=c(0.5, 1)) + scale_x_continuous(breaks = 1:10)
+```  
+
+### Within-subject effects
+
+Example: Target fixation in spoken word-to-picure matching (VWP)
+
+```{r}
+ggplot(TargetFix, aes(Time, meanFix, color=Condition, fill=Condition)) +
+  stat_summary(fun.y=mean, geom="line") +
+  stat_summary(fun.data=mean_se, geom="ribbon", color=NA, alpha=0.3) +
+  theme_bw() + expand_limits(y=c(0,1)) + legend_positioning(c(1,1)) +
+  labs(y="Fixation Proportion", x="Time since word onset (ms)")
+```
+
+
+```{r}
+ggplot(TargetFix, aes(Time, meanFix, color=Condition, fill=Condition)) +
+  stat_summary(fun.y=mean, geom="line") +
+  stat_summary(fun.data=mean_se, geom="ribbon", color=NA, alpha=0.3) +
+  theme_bw() + expand_limits(y=c(0,1)) + legend_positioning(c(1,1)) +
+  labs(y="Fixation Proportion", x="Time since word onset (ms)")
+```  
+
+
+### Within-subject effects: fit full GCA model
+
+```{r}
+m.full <- lmer(meanFix ~ (poly1+poly2+poly3)*Condition + #fixed effects
+                 (poly1+poly2+poly3 | Subject) + #random effects of Subject
+                 (poly1+poly2+poly3 | Subject:Condition), #random effects of Subj by Cond
+               data=TargetFix.gca, REML=F)
+get_pvalues(m.full)
+```  
