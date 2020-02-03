@@ -1,0 +1,52 @@
+
+
+#### Data
+
+* `subject`
+
+* `TP`
+
+* `Block`
+
+* `Accuracy`
+
+
+```{r}
+## 3.4 Word Learning
+ggplot(WorkLearnEx,aes(Block,Accuracy,shape=TP))+ 
+  stat_summary(fun.y=mean_se,geom="line",size=1) +
+  stat_summary(fun.data=mean_se,geom="pointrange",size=1)+ 
+  theme_bw(base_size=10)+
+  coord_cartesian(ylim=c(0.5,1.0))+
+  scale_x_continuous(breaks=1:10)
+```
+
+#### Base Model
+
+This base model captures the overall time course with a second order orthogonal polynomial and allows individual participants to vary randomly (i.e. following a normal distribution with a mean of 0) on any of the three components of the overall time course (intercept, linear and quadratic).
+
+```{r}
+m.base <-lmer(Accuracy ~ (ot1+ot2) + (ot1+ot2Subject), data=WordLearnEx, REML=FALSE)
+```
+
+```{r}
+m.0 <-lmer(Accuracy ~ (ot1+ot2) + TP + (ot1+ot2Subject), data=WordLearnEx, REML=FALSE)
+```
+
+
+```{r}
+m.1 <-lmer(Accuracy ~ (ot1+ot2) + TP + ot1:TP + (ot1+ot2Subject), data=WordLearnEx, REML=FALSE)
+```
+
+
+
+
+```{r}
+## 3.4 Word Learning
+ggplot(WorkLearnEx,aes(Block,Accuracy,shape=TP))+ 
+  stat_summary(aes(y = fitted(m.2),lintype=TP),fun.y=mean,geom="line",size=1) +
+  stat_summary(fun.data=mean_se,geom="pointrange",size=1)+ 
+  theme_bw(base_size=10)+
+  coord_cartesian(ylim=c(0.5,1.0))+
+  scale_x_continuous(breaks=1:10)
+```
